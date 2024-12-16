@@ -10,4 +10,4 @@ function GetArticles() {
   });
 }
 
-export { GetArticles };
+export { GetArticles, api };

@@ -3,7 +3,7 @@ import { GetArticles } from "../api.js";
 import { useEffect, useState } from "react";
 import { CreateCard } from "./ArticleCard.jsx";
 
-function Articles() {
+function Articles({ setArticle_id }) {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     GetArticles().then((response) => {
@@ -15,7 +15,7 @@ function Articles() {
       <Link to="/">back to home</Link>
       <ul className="list">
         {articles.map((article) => {
-          return <CreateCard article={article} />;
+          return <CreateCard article={article} setArticle_id={setArticle_id} />;
         })}
       </ul>
     </>
