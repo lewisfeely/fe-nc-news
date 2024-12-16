@@ -7,16 +7,16 @@ import Comments from "./componments/Comments.jsx";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [article_id, setArticle_id] = useState("");
 
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Articles />} />
+        <Route path="/" element={<Articles setArticle_id={setArticle_id} />} />
         <Route
           path="/api/articles/:article_id/comments"
-          element={<Comments />}
+          element={<Comments article_id={article_id} />}
         />
       </Routes>
     </>

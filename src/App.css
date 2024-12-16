@@ -34,3 +34,10 @@
   border-radius: 30px;
   color: white;
 }
+
+.comment-title {
+  background-color: red;
+  border-radius: 30px;
+  width: 350px;
+  height: 30px;
+}
