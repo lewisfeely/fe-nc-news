@@ -41,19 +41,3 @@
   width: 350px;
   height: 30px;
 }
-
-.link {
-  background-color: red;
-  color: white;
-  border-radius: 50px;
-}
-article {
-  text-align: center;
-  align-content: center;
-}
-
-.article-img {
-  height: 50%;
-  width: 50%;
-  border-radius: 80px;
-}
