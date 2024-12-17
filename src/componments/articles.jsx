@@ -13,7 +13,7 @@ function Articles({ setArticle_id }) {
   return (
     <>
       <Link to="/">back to home</Link>
-      <ul className="list">
+      <ul key={articles.article_id} className="list">
         {articles.map((article) => {
           return <CreateCard article={article} setArticle_id={setArticle_id} />;
         })}

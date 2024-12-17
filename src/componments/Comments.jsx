@@ -1,10 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
 
 function Comments({ article_id }) {
-  const [loading, setLoading] = useState(true);
   const [comments, setComments] = useState([]);
   useEffect(() => {
     console.log(article_id);
@@ -25,7 +23,9 @@ function Comments({ article_id }) {
           );
         })}
       </ol>
-      <Link to="/">back to articles</Link>
+      <Link to="/api/articles/:article_id" className="link">
+        back to article
+      </Link>
       <p>article comments </p>;
     </>
   );
