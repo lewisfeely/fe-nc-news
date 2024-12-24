@@ -5,6 +5,7 @@ import CommentCard from "./CommentCard";
 
 function ArticleInfo({ article_id, userLogged }) {
   const [article, setArticle] = useState({});
+  const [voted, setVoted] = useState(false);
   const [articleVotes, setArticleVotes] = useState(0);
   const [loading, setLoading] = useState(true);
   const [voting, setVoting] = useState(false);
@@ -46,6 +47,7 @@ function ArticleInfo({ article_id, userLogged }) {
       console.log(data);
       setVoting(false);
     });
+    setVoted(true);
   }
   function downVote(e) {
     setArticleVotes(articleVotes - 1);
@@ -57,6 +59,7 @@ function ArticleInfo({ article_id, userLogged }) {
       console.log(data);
       setVoting(false);
     });
+    setVoted(true);
   }
   if (loading) {
     return (
@@ -93,7 +96,7 @@ function ArticleInfo({ article_id, userLogged }) {
           <img src={article.article_img_url} alt="" className="article-img" />
           <p>topic: {article.topic}</p>
           <p className="author-name">{article.body}</p>
-          <p>votes: {articleVotes}</p>
+          <p>processing vote...</p>
           <button onClick={upVote} className="button-18">
             voting...
           </button>
@@ -101,15 +104,59 @@ function ArticleInfo({ article_id, userLogged }) {
             voting...
           </button>
           <br />
-          <ol>
-            {commentsData.map((comment) => {
-              return <CommentCard userLogged={userLogged} comment={comment} />;
-            })}
-          </ol>
+          <div className="comment-list">
+            <ol>
+              {commentsData.map((comment) => {
+                return (
+                  <CommentCard userLogged={userLogged} comment={comment} />
+                );
+              })}
+            </ol>
+          </div>
           <Link to="/api/articles/:article_id" className="link">
             back to article
           </Link>
           <p>article comments </p>;
+          <br />
+          <div className="nav-bar">
+            <Link to="/api/articles/:article_id/comments" className="link nav">
+              view articles {article.comment_count} comments
+            </Link>
+
+            <Link to="/" onClick={reset} className="link nav">
+              back to all articles
+            </Link>
+
+            <Link to="/leaveComment" className="link nav">
+              write comment
+            </Link>
+          </div>
+        </article>
+      </>
+    );
+  }
+  if (voted) {
+    return (
+      <>
+        {console.log(article)}
+        <h4 className="author-name">author: {article.author}</h4>
+        <article>
+          <h3 className="title">{article.title}</h3>
+          <img src={article.article_img_url} alt="" className="article-img" />
+          <p>topic: {article.topic}</p>
+          <p className="author-name">{article.body}</p>
+          <p>votes: {articleVotes}</p>
+          <h3>thank you for your vote!</h3>
+          <div className="comment-list">
+            <ol>
+              {commentsData.map((comment) => {
+                return (
+                  <CommentCard userLogged={userLogged} comment={comment} />
+                );
+              })}
+            </ol>
+          </div>
+          <p>article comments </p>
           <br />
           <div className="nav-bar">
             <Link to="/api/articles/:article_id/comments" className="link nav">

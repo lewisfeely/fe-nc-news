@@ -33,8 +33,19 @@ function SignIn({ setUserLogged }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" id="author" onChange={username} className="input" />
-      <input type="password" id="passcode" className="input" />
+      <input
+        type="text"
+        id="author"
+        onChange={username}
+        className="input"
+        placeholder="username"
+      />
+      <input
+        type="password"
+        id="passcode"
+        className="input"
+        placeholder="password"
+      />
       <button type="submit" className="button-18">
         log in
       </button>

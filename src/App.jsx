@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./componments/header.jsx";
+import Header from "./componments/Header.jsx";
 import Articles from "./componments/articles.jsx";
 import ArticleInfo from "./componments/ArticleInfo.jsx";
 import CreateComment from "./componments/CreateComment.jsx";

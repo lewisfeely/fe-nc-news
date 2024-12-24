@@ -44,15 +44,6 @@
   margin: 20px;
 }
 
-h1 {
-  position: absolute;
-  top: 18%;
-  left: 40%;
-  width: 500px;
-  height: 300px;
-  margin: -100px 0 0 -100px;
-}
-
 .select-box {
   padding: 15px;
   background-color: grey;
@@ -92,11 +83,65 @@ body {
   border: 5px solid rgb(255, 255, 255);
   padding: 25px;
 }
-
 .header {
-  color: red;
-  align-items: center;
+  position: absolute;
+  top: 18%;
+  left: 43%;
+  width: 160px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  text-align: right;
+  margin: -100px 0 0 -100px;
+  background-color: red;
+  color: #cccccc;
+  z-index: 1;
+}
+.home {
+  position: absolute;
+  top: 1%;
+  background-color: #cccccc;
+  border-radius: 30px;
+  width: 80px;
   text-align: center;
+  padding: 10px;
+}
+.northcoders-logo {
+  width: 80px;
+  height: 80px;
+  align-self: center;
+  position: absolute;
+  top: 6%;
+  left: 61%;
+  border-radius: 30px;
+}
+.home:hover {
+  content: "sign into account";
+  background-color: white;
+  color: red;
+  font-size: larger;
+  text-decoration: underline;
+}
+.header-end {
+  position: absolute;
+  top: 18%;
+  left: 55%;
+  width: 160px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  text-align: left;
+  margin: -100px 0 0 -100px;
+  background-color: #cccccc;
+  color: red;
+}
+.header-end:hover {
+  background-color: red;
+  color: #cccccc;
+}
+.header:hover {
+  background-color: #cccccc;
+  color: red;
 }
 .images {
   border-radius: 80px;
