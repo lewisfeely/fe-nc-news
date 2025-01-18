@@ -1,34 +1,53 @@
-## front end Northcoders news
+## Front-End: Northcoders News
 
 This project integrates both front-end and back-end techniques to create a seamless user experience. The majority of the front-end code is written using React, HTML, and CSS, which together allow for dynamic, responsive interactions on the page.
 
-The database for this projects is Supabase and hosted on Render. The set-up instructions for the back-end are provided in the `README` file. Articles are fetched through the Render URL (specified in the `api.js` file), allowing for real-time access to the data.
+The database for this project is Supabase, and it is hosted on Render. The setup instructions for the back-end are provided in the `README` file. Articles are fetched through the Render URL (specified in the `api.js` file), allowing for real-time access to the data.
 
-On the front-end, articles are organized using route tags in the `App.jsx` file, with navigation achieved through methods like React Router’s `navigate` and Link components. These navigation methods allow users to transition between pages, dynamically updating the content displayed based on the current route or path. For example, when a user navigates to a specific article, the content is updated to reflect that article’s details, including the ability to view, delete, or add comments. The page content automatically updates to reflect the relevant information for each route, providing an intuitive and responsive experience.
+On the front-end, articles are organized using route tags in the `App.jsx` file, with navigation achieved through methods like React Router’s `navigate` and `Link` components. These navigation methods allow users to transition between pages, dynamically updating the content displayed based on the current route or path. For example, when a user navigates to a specific article, the content updates to reflect that article’s details, including the ability to view, delete, or add comments. The page content automatically updates to reflect the relevant information for each route, providing an intuitive and responsive experience.
 
-## set up steps
+---
 
-<ol>
-<li>clone this git repository https://github.com/lewisfeely/fe-nc-news.git
- </li>
-<li>run the command `npm i` this will install all the dependecies required for the project</li>
-<Li>then simply run the command "npm run dev" this will generate a server port and run the express server so that the server begins listening on that port</li>
-<li>copy and paste the link on the local tag in the terminal</li>
-</ol>
+## Setup Instructions
 
-## user stories
+1. Clone this Git repository:
 
-guest users on this news site are able to login to an account thats ready made and stored in the supabase data base (default password is "password" for all accounts)
+   ```bash
+   https://github.com/lewisfeely/fe-nc-news.git
 
-### all users are able to...
+   ```
 
-<ol>
-<li> users are able to view articles 
-<li> users are able to filter articles by votes, title (alphabetically) and quantity of votes.
-<li>users are able to view articles by their topic
-<li> users are able to leave a comment on an article if theyre logged in
-<li> users are able to delete their own comments 
-<li> users are able to leave a vote on an article 
-<li> users are able to interact with the heading
-<li> users are able to see a preview of an article 
-</ol>
+2. Run the command
+
+   ```bash
+   npm install
+   ```
+
+to install all the dependencies required for the project.
+
+3. Then, run the command
+
+   ```bash
+   npm run dev
+   ```
+
+   to start the server. This will generate a server port and run the Express server, which will begin listening on that port.
+
+4. Copy and paste the link provided in the terminal under the "local" tag to access the application.
+
+---
+
+## User Stories
+
+Guest users on this news site are able to log in to a pre-made account stored in the Supabase database (the default password for all accounts is "password").
+
+### All users are able to...
+
+1. View articles.
+2. Filter articles by votes, title (alphabetically), and vote count.
+3. View articles by their topic.
+4. Leave a comment on an article if logged in.
+5. Delete their own comments.
+6. Leave a vote on an article.
+7. Interact with the article heading.
+8. See a preview of an article.
